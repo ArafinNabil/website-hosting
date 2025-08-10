@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.register-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+}
+
+.register-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6e64ff;
+  outline: none;
+}
+
+.full-width {
+  grid-column: span 2; /* Button spans both columns */
+}
+
+.register-btn {
+  padding: 12px;
+  width: 100%;
+  background-color: #6e64ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #554cdf;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 600px) {
+  .register-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+</style>
+<body>
+   <div class="register-container">
+  <h2>Create Your Account</h2>
+  <form action="register-handler.php" method="POST">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phonenumber">Phone Number</label>
+      <input type="text" name="phonenumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address1">Address</label>
+      <input type="text" name="address1" required>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" name="city" required>
+    </div>
+
+    <div class="form-group">
+      <label for="state">State</label>
+      <input type="text" name="state" required>
+    </div>
+
+    <div class="form-group">
+      <label for="postcode">Postcode</label>
+      <input type="text" name="postcode" required>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select name="country" required>
+        <option value="BD">Bangladesh</option>
+        <option value="US">United States</option>
+        <option value="GB">United Kingdom</option>
+        <option value="IN">India</option>
+        <option value="CA">Canada</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password" required>
+    </div>
+
+    <button type="submit" class="register-btn">Register</button>
+  </form>
+</div>
+</body>
+</html>
