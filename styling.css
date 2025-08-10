@@ -357,6 +357,12 @@ span{
     font-size: 1.2rem;
     text-decoration: none;
 }
+.product2 a:last-child{
+    color: #fff;
+    transition: all ease-in 1s;
+}
+
+
 .buynowbtn{
     position: absolute;
     width: 140px;
